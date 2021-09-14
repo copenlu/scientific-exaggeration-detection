@@ -1,0 +1,3 @@
+[submodule "pet"]
+	path = pet
+	url = git@github.com:dwright37/pet.git

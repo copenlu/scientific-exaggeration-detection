@@ -40,7 +40,7 @@ We used the data from `insciout_test.jsonl` as test data in all of the experimen
 
 ## MT-PET
 
-The code to run multi-task PET is included as a submodule pointing to [our PET fork](https://github.com/dwright37/pet). Either clone that repository or pull the submodule by running `git submodule update --init --recursive`
+The code to run multi-task PET is included as a submodule pointing to [our PET fork](https://github.com/dwright37/mt-pet). Either clone that repository or pull the submodule by running `git submodule update --init --recursive`
 
 ## Citation
 

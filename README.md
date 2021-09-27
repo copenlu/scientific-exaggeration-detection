@@ -4,6 +4,8 @@ Dustin Wright and Isabelle Augenstein
 
 In EMNLP 2021
 
+https://arxiv.org/pdf/2108.13493.pdf%20
+
 *Code is currently being prepared! Curated test data is now available.*
 
 <p align="center">

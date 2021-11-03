@@ -1,0 +1,23 @@
+name: scientific-exaggeration-detection
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - matplotlib=3.4.3=py37h06a4308_0
+  - numpy=1.21.2=py37h20f2e39_0
+  - pandas=1.3.4=py37h8c16a72_0
+  - pip=21.0.1=py37h06a4308_0
+  - python=3.7.11=h12debd9_0
+  - pytorch=1.10.0=py3.7_cuda10.2_cudnn7.6.5_0
+  - scikit-learn=1.0.1=py37h51133e4_0
+  - torchaudio=0.10.0=py37_cu102
+  - torchvision=0.11.1=py37_cu102
+  - pip:
+    - ipdb==0.13.9
+    - jsonpickle==2.0.0
+    - tqdm==4.62.3
+    - transformers==4.12.3
+    - unidecode==1.3.2
+    - wandb==0.12.6
+prefix: scientific-exaggeration-detection
+

@@ -1,0 +1,39 @@
+{
+  "1": {
+    "0": [
+      "preliminary",
+      "competing",
+      "uncertainties"
+    ],
+    "1": [
+      "following",
+      "explicit"
+    ],
+    "2": [
+      "mistaken",
+      "wrong",
+      "hollow",
+      "naive",
+      "false",
+      "lies"
+    ]
+  },
+  "3": {
+    "0": [
+      "hypothetical",
+      "theoretical",
+      "conditional"
+    ],
+    "1": [
+      "identical"
+    ],
+    "2": [
+      "mistaken",
+      "wrong",
+      "premature",
+      "fantasy",
+      "noisy",
+      "artificial"
+    ]
+  }
+}

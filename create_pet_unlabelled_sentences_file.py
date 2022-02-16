@@ -10,6 +10,9 @@ if __name__ == '__main__':
     id_file_loc = sys.argv[2]
     logits_loc = sys.argv[3]
     output_file = sys.argv[4]
+    task_name = sys.argv[5]
+
+    assert task_name == 'cls' or task_name == 'nli', "Invalid task name used"
 
     if unlabelled_loc.endswith('.csv'):
         data = pd.read_csv(unlabelled_loc, header=None)
@@ -39,12 +42,23 @@ if __name__ == '__main__':
             abstract_data[id_].append(v[0])
             abstract_labels[id_].append(v[1])
 
-    # Get pairs from the soft labels
-    out_data = []
-    with open(output_file, 'wt') as f:
+    if task_name == 'nli':
+        # Get pairs from the soft labels
+        out_data = []
+        with open(output_file, 'wt') as f:
+            for id_ in press_data:
+                curr = {}
+                top_press = press_data[id_][np.argmax(np.array(press_labels[id_])[:,1])]
+                top_abstract = abstract_data[id_][np.argmax(np.array(abstract_labels[id_])[:,1])]
+
+                f.write(json.dumps({'text': top_press, 'label': -1, 'text_pair': top_abstract}) + '\n')
+    else:
+        out_data = []
         for id_ in press_data:
-            curr = {}
             top_press = press_data[id_][np.argmax(np.array(press_labels[id_])[:,1])]
             top_abstract = abstract_data[id_][np.argmax(np.array(abstract_labels[id_])[:,1])]
-
-            f.write(json.dumps({'text': top_press, 'label': -1, 'text_pair': top_abstract}) + '\n')
+            out_data.append([top_press, '-1', 'press'])
+            out_data.append([top_abstract, '-1', 'abstract'])
+        df = pd.DataFrame(out_data)
+        df.to_csv(output_file, index=None, header=None) 
+    

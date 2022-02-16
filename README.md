@@ -89,7 +89,7 @@ $ python cli.py \
     --balance_class_weight
 ```
 
-Next, create unlabeled conclusion sentences by running the following, selecting the directory corresponding to the main task:
+Next, create unlabeled conclusion sentences by running the following, specifying the main task for the options in brackets and saving a `jsonl` file for nli vs a `csv` for cls:
 
 ```bash
 $ cd ..
@@ -97,7 +97,8 @@ $ python create_pet_unlabelled_sentences_file.py \
     data/conclusion_detection/unlabelled_pet.jsonl \
     data/conclusion_detection/unlabelled_ids.txt \
     mt-pet/conclusion_detection/unlabeled_logits.txt \
-    data/{pet_nli|pet_cls}/unlabelled_pet.jsonl
+    data/{pet_nli|pet_cls}/unlabelled_pet.{jsonl|csv} \
+    {nli|csv}
 ```
 
 You can then run multi-task PET as follows (this example is for using CLS as the main task):

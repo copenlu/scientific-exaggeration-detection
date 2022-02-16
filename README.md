@@ -98,7 +98,7 @@ $ python create_pet_unlabelled_sentences_file.py \
     data/conclusion_detection/unlabelled_ids.txt \
     mt-pet/conclusion_detection/unlabeled_logits.txt \
     data/{pet_nli|pet_cls}/unlabelled_pet.{jsonl|csv} \
-    {nli|csv}
+    {nli|cls}
 ```
 
 You can then run multi-task PET as follows (this example is for using CLS as the main task):

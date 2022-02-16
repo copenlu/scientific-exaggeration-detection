@@ -52,7 +52,7 @@ The code to run multi-task PET is included as a submodule pointing to [our PET f
 To setup an environment for running our experiments, first install [conda](https://www.anaconda.com/products/individual). Then, run the following:
 
 ```bash
-$ conda env create -f environment.yml_test.yml
+$ conda env create -f environment.yml
 $ conda activate scientific-exaggeration-detection
 ```
 

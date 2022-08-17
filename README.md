@@ -14,7 +14,7 @@ Public trust in science depends on honest and factual communication of scientifi
 
 ## Data
 
-The training and test data derived from the studies from [Sumner et al. 2014](https://www.bmj.com/content/349/bmj.g7015) and [Bratton et al. 2019](https://pubmed.ncbi.nlm.nih.gov/31728413/#:~:text=Results%3A%20We%20found%20that%20the,inference%20from%20non%2Dhuman%20studies.) can be found in the `data` directory. Alternatively, you can load the data directly from the HuggingFace model hub as follows:
+The training and test data derived from the studies from [Sumner et al. 2014](https://www.bmj.com/content/349/bmj.g7015) and [Bratton et al. 2019](https://pubmed.ncbi.nlm.nih.gov/31728413/#:~:text=Results%3A%20We%20found%20that%20the,inference%20from%20non%2Dhuman%20studies.) can be found in the `data` directory. Alternatively, you can load the data directly from the [HuggingFace model hub](https://huggingface.co/datasets/copenlu/scientific-exaggeration-detection) as follows:
 
 ```
 from datasets import load_dataset
